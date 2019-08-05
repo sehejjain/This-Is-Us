@@ -1,0 +1,122 @@
+{% extends "core/layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <nav id="overlay-about" class="navmenu nav-right">
+        <img src="../../media/images/close-btn.svg" class="close-btn" id="close-about">
+        <span>
+                <section>
+                    this is us
+                </section>
+                <div>
+                    go back home
+                </div>
+        </span>
+    </nav>
+    <nav id="overlay-contact" class="navmenu nav-left">
+        <img src="../../media/images/close-btn.svg" class="close-btn" id="close-contact">
+        <span>
+                <section>
+                    call me here
+                </section>
+                <div>
+                    go back home
+                </div>
+        </span>
+    </nav>
+
+
+    <nav id="overlay-registerUser" class="navmenu nav-right">
+        <img src="../../media/images/close-btn.svg" class="close-btn" id="close-user">
+        <span>
+            <form method = 'post' action = '/register/user' class='form'>
+                {% csrf_token %}
+                <legend class="border-bottom mb-4">Register a User</legend>
+                    {% for field in user_form %}
+                        {{field}}
+                    {% endfor %}
+                </div>
+                <input type = "submit" value = 'Submit' />
+                <div class="border-top pt-3" style="position: initial; width: inherit">
+                    <small class = 'text-muted'>
+                        <a href="/login">
+                        Already Have An Account?
+                        </a>
+                    </small>
+                </div>
+            </form>
+        </span>
+    </nav>
+
+    <nav id="overlay-registerOrg" class="navmenu nav-left">
+        <img src="../../media/images/close-btn.svg" class="close-btn" id="close-org">
+        <span>
+            <form method = 'post' action = '/register/org' class='form'>
+                {% csrf_token %}
+                <legend class="border-bottom mb-4">Register an Organisation</legend>
+                
+                    {% for field in org_form %}
+                    {{field}}
+                    {% endfor %}     
+                <input type = "submit" value = 'Submit' />
+                <div class="border-top pt-3" style="position: initial; width: inherit">
+                    <small class = 'text-muted'>
+                        <a href="/login">
+                        Already Have An Account?
+                        </a>
+                    </small>
+                </div>
+            </form>
+        </span>
+    </nav>
+
+    <span class="contact" id="contact">contact us</span>
+    <span class="about" id="about">about us</span>
+
+
+    <section>
+        <h1>this is  us</h1>
+    </section>
+   
+    <span class = 'user' id="user">are you an individual?</span>
+    <span class = 'org' id="org">are you an organisation?</span>
+    
+    <script>
+
+        var about = document.getElementById("overlay-about");
+        var contact = document.getElementById("overlay-contact");
+        var user = document.getElementById("overlay-registerUser");
+        var org = document.getElementById("overlay-registerOrg");
+
+        document.getElementById("about").addEventListener("click", function(){
+            about.classList.add("show-nav")
+        });
+        document.getElementById("close-about").addEventListener("click", function(){
+            about.classList.remove("show-nav")
+        });
+        document.getElementById("contact").addEventListener("click", function(){
+            contact.classList.add("show-nav")
+        });
+        document.getElementById("close-contact").addEventListener("click", function(){
+            contact.classList.remove("show-nav")
+        });
+        document.getElementById("user").addEventListener("click", function(){
+            user.classList.add("show-nav")
+        });
+        document.getElementById("close-user").addEventListener("click", function(){
+            user.classList.remove("show-nav")
+        });
+        document.getElementById("org").addEventListener("click", function(){
+            document.getElementById("overlay-registerOrg").classList.add("show-nav")
+        });
+        document.getElementById("close-org").addEventListener("click", function(){
+            document.getElementById("overlay-registerOrg").classList.remove("show-nav")
+        });
+
+
+    </script>
+
+{% endblock %}

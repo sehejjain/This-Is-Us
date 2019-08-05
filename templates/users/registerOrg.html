@@ -1,0 +1,39 @@
+{% extends "core/layout.html" %}
+{% load crispy_forms_tags  %}
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <form method = 'post' action = '/register/org' class='formx'>
+      {% csrf_token %}
+      <legend class="border-bottom mb-4">Register an Organisation</legend>
+      {% for field in org_form %}
+      {% if field.errors %}
+      <p class="alert alert-danger">
+        {{ field.errors.as_text }}
+        <br>
+        </p>  
+        {% endif %}
+        {% endfor %}
+
+      {% for field in org_form %}
+          </p>
+
+          {{field}}
+      {% endfor %}
+
+
+      <input type = "submit" value = 'Submit' />
+      <div class="border-top pt-3">
+        <small class = 'text-muted'>
+          <a href="#">
+          Already Have An Account?
+        </a></small>
+      </div>
+</div>
+
+
+{% endblock %}

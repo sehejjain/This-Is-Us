@@ -1,0 +1,335 @@
+body
+  margin: 0
+  padding: 0
+  font-family: Montserrat
+
+
+nav .navbar-brand
+
+    /* size for brand */
+    font-size: xx-large
+
+
+
+/* colors for brand */
+nav .navbar-brand .blue
+
+    color: #537fbe
+
+nav .navbar-brand .red
+
+    color: #ea433b
+
+nav .navbar-brand .yellow
+
+    color: #f5b82e
+
+nav .navbar-brand .green
+
+    color: #2e944b
+
+
+main .form-control
+
+    /* center form controls */
+    display: inline-block
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto
+
+
+main
+
+    /* scroll horizontally as needed */
+    overflow-x: auto
+
+    /* center contents */
+    text-align: center
+
+
+main img
+
+    /* constrain images on small screens */
+    max-width: 100%
+
+
+/* Split the screen in half */
+.split 
+  height: 100%
+  width: 50%
+  position: fixed
+  z-index: 1
+  top: 0
+  overflow-x: hidden
+  padding-top: 20px
+
+
+/* Control the left side */
+.left 
+  left: 0
+  background-color: #111
+
+
+/* Control the right side */
+.right 
+  right: 0
+  background-color: red
+
+
+/* If you want the content centered horizontally and vertically */
+.centered 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+
+
+/* Style the image inside the centered container, if needed */
+.centered img 
+  width: 150px
+  border-radius: 50%
+
+
+
+.one-is-active .section-one 
+  width: 70%
+
+.one-is-active .section-two 
+  width: 30%
+
+
+.two-is-active .section-one 
+  width: 30%
+
+.two-is-active .section-two 
+  width: 70%
+
+.inactive .section-one
+  width : 50%
+
+.inactive .section-two
+  width:50%
+
+
+.menu 
+  height: 40px
+  text-align: center
+  padding: 10px
+  position: fixed
+  background: darkseagreen
+  width: 100%
+  top: 0
+  z-index: 100
+  color: #fff
+
+
+.container 
+  width: 100%
+  height: calc(90vh - 40px)
+  overflow: hidden
+  padding: 0
+
+
+.section-one 
+  width: 50%
+  float: left
+  height: 100%
+  position: relative
+  transform: skew(-9deg)
+  z-index: 1
+  transition: width 0.5s
+  padding: 0
+
+.section-one:before 
+  content: ""
+  width: 50%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  transform: skew(9deg)
+  z-index: -1
+  padding: 0
+
+
+
+.section-two 
+  width: 50%
+  float: left
+  height: 100%
+  border:5px
+  transform: skew(-9deg)
+  position: relative
+  z-index: 1
+  transition: width 0.5s
+  padding: 0
+
+
+.section-two:after 
+  content: ""
+  width: 50%
+  height: 100%
+  border:5px
+  position: absolute
+  top: 0
+  right: 0
+  transform: skew(9deg)
+  z-index: -1
+  padding: 0
+
+
+
+.content 
+  transform: skew(9deg)
+  padding: 20px
+  color: #fff
+  text-align: center
+
+
+
+.container-fluid
+    padding: 0 !important
+
+
+.jumbotron
+  padding: 0
+
+
+.box
+  width: 400px
+  height:inherit
+  padding: 40px
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  background: #191919
+  text-align: center
+  overflow: scroll
+
+.box legend, .box span
+  color: white
+  text-transform: uppercase
+  font-weight: 500
+
+
+.box button:hover
+  background: #2ecc71
+
+.box input[type = "text"],.box input[type = "number"],.box input[type = "password"],.box input[type = "email"], .box textarea
+  border:0
+  background: none
+  display: block
+  margin: 20px auto
+  text-align: center
+  border: 2px solid #3498db
+  padding: 14px 10px
+  width: 200px
+  outline: none
+  color: white
+  border-radius: 24px
+  transition: 0.25s
+
+.box input[type = "text"]:focus,.box input[type = "number"]:focus,.box input[type = "password"]:focus,.box input[type = "email"]:focus, .box textarea:focus
+  width: 280px
+  border-color: #2ecc71
+
+
+
+
+.box input[type = "submit"]
+  border:0
+  background: none
+  display: block
+  margin: 20px auto
+  text-align: center
+  border: 2px solid #2ecc71
+  padding: 14px 40px
+  outline: none
+  color: white
+  border-radius: 24px
+  transition: 0.25s
+  cursor: pointer
+
+
+.box input[type = "submit"]:hover
+  background: #2ecc71
+
+
+.box button
+  border:0
+  background: none
+  display: block
+  margin: 20px auto
+  text-align: center
+  border: 2px solid #2ecc71
+  padding: 14px 40px
+  outline: none
+  color: white
+  border-radius: 24px
+  transition: 0.25s
+  cursor: pointer
+
+
+.box button:hover
+  background: #2ecc71
+
+
+.tooltip 
+  position: relative
+  display: inline-block
+  border-bottom: 1px dotted black
+
+
+.tooltip .tooltiptext 
+  visibility: hidden
+  width: 120px
+  background-color: black
+  color: #fff
+  text-align: center
+  border-radius: 6px
+  padding: 5px 0
+  position: absolute
+  z-index: 1
+  top: -5px
+  left: 110%
+
+
+.tooltip .tooltiptext::after 
+  content: ""
+  position: absolute
+  top: 50%
+  right: 100%
+  margin-top: -5px
+  border-width: 5px
+  border-style: solid
+  border-color: transparent black transparent transparent
+
+.tooltip:hover .tooltiptext 
+  visibility: visible
+
+
+.content-section 
+  background: #ffffff
+  padding: 10px 20px
+  border: 1px solid #dddddd
+  border-radius: 3px
+  margin-bottom: 20px
+
+.sectionA
+    position: fixed
+    bottom:0
+    right: 0
+
+.sectionB
+    position: fixed
+    bottom:0
+    left: 0
+
+.h1
+    font-weight: bold;
+    color: black
+    font-size: 4em
+    width: 70%
+    padding: 4em

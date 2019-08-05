@@ -1,0 +1,42 @@
+{% extends "core/layout.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+  Register
+{% endblock %}
+
+{% block main %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>  
+    {% endfor %}
+{% endif %}
+
+<div class="container">
+  <form method="post" action = '/login' class='formx'>
+              {% csrf_token %}
+                  <legend class="border-bottom mb-4" style="color: black">Log In</legend>
+                  
+                {% if form.errors %}
+                    <p class="alert alert-danger">
+                        Your username and password didn't match. 
+                        Please try again.
+                    </p>
+                {% endif %}
+
+                  {% for field in form %}
+                      {{field}}
+                  {% endfor %}
+                  <input type = "submit" style="background: black; color: white" value = 'Submit' />
+              <div class="border-top pt-3">
+                  <small class="text-muted">
+                      Need An Account? <a class="ml-2" href="/">Sign Up Now</a>
+                  </small>
+              </div>
+    </form>
+
+</div>
+
+{% endblock %}

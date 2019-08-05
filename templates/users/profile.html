@@ -1,0 +1,33 @@
+{% extends 'core/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+<br>
+<div class="content-section">
+  <div class="container">
+    <div class="media">
+      {% if user.isUser == True %}
+      <img class="rounded-circle account-img" src="{{ user.userprofile.image.url }}">
+      {% else %}
+      <img class="rounded-circle account-img" src="{{ user.orgprofile.image.url }}">
+      {% endif %}
+      <div class="media-body">
+        <h2 class="account-heading">{{ user.username }}</h2>
+        <p class="text-secondary">{{ user.email }}</p>
+      </div>
+    </div>
+    <br>
+    <form method="POST" enctype="multipart/form-data" class='box'>
+           {% csrf_token %}
+           <fieldset class="form-group">
+               {{ form }}
+           </fieldset>
+           <div class="form-group">
+               <button class="btn btn-outline-info" type="submit">Update</button>
+           </div>
+       </form>
+  </div>
+
+</div>
+
+{% endblock %}

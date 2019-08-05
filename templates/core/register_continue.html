@@ -1,0 +1,16 @@
+{% extends "core/layout.html" %}
+
+{% block title %}
+Continue
+{% endblock %}
+
+{% block main %}
+<form method = 'post' action = '/register'>
+    {% csrf_token %}
+
+
+{{profile_form.as_p}}
+
+    <input type = 'submit' value = 'Submit' />
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'project_app/layout.html' %}
+
+{% block main %}
+
+
+<div class="container">
+
+    {% for loc in locations %}
+    <ul>
+      <ol>
+        <li>{{loc.name}}</li>
+        <li>{{loc.lat}}</li>
+        <li>{{loc.long}}</li>
+        <li>{{loc.contact_email}}</li>
+        <li>{{loc.contact_phone}}</li>
+      </ol>
+
+  </ul>
+{% endfor %}
+</div>
+
+
+{% endblock %}

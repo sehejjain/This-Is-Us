@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700')
+
+    
+body, html 
+    font-family: 'Montserrat'
+    margin: 0
+    height: 100%
+
+    a 
+        text-decoration: none
+        color: gray
+
+nav
+    .brand
+        font-family: 'Montserrat Subrayada'
+        font-size: 2em
+
+section
+    padding: 4em
+    position: fixed
+    top: 30%
+    left: 20%
+    right: 20%
+
+    h1
+        font-weight: 900
+        font-size: 4em
+        margin: 1em auto
+        width: 70%
+
+        &::before
+            content: ''
+            border-top: 5px solid lightgray
+            display: block
+
+
+.user
+    position: fixed
+    bottom:0
+    right: 0
+    padding: 1em
+    background: white
+    width: auto
+    font-size: 2em
+    text-align: right
+
+    a
+        text-decoration: none
+        color: black
+
+    &:hover
+        background: darkgray
+        color: white
+
+.org
+    position: fixed
+    bottom:0
+    left: 0
+    padding: 1em
+    background: white
+    width: auto
+    font-size: 2em
+
+    a
+        color: black
+        text-decoration: none
+
+    &:hover
+        background: darkgray
+        color: white
+
+.nav-overlay
+    color: black
+    postition: absolute
+
+.contact
+    position: fixed
+    left: 0
+    padding: 1em
+    background: white
+    width: auto
+    font-size: 2em
+    color: gray
+    &:hover
+        background: darkgray
+        color: white
+
+.about
+    position: fixed
+    right: 0
+    padding: 1em
+    background: white
+    width: auto
+    font-size: 2em
+    float: right
+    text-align: right
+    color: gray
+    cursor: pointer
+
+    &:hover
+        background: darkgray
+        color: white
+    
+        
+.navmenu
+    position: absolute
+    background: black
+    padding: 2em
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 1
+    display: none
+    transform: scaleX(0)
+
+    .close-btn
+        float: right
+        cursor: pointer
+        opacity: 0
+        width: 18px
+        
+
+
+    span
+        margin: auto
+        padding: 2em
+        text-align: center
+        opacity: 0
+
+
+        section
+            position: absolute
+            height: auto
+            width: auto
+            top: 30%
+            left: 20%
+            color: white
+            font-weight: bold
+            font-size: 4em
+            padding: 0
+
+            
+        div
+            width: 40%
+            position: absolute
+            top: 45%
+            left: 30%
+            color: white
+            margin: auto
+
+.nav-right
+    transform-origin: right
+
+.nav-left
+    transform-origin: left
+
+.show-nav
+    display: block
+    animation: slide-menu 0.5s ease-in forwards
+
+    .close-btn
+        animation: show-nav 0.5s forwards
+    
+    span
+        animation: show-nav 0.25s 1s ease-in forwards
+
+@keyframes slide-menu 
+    from 
+        transform: scaleX(0)
+    
+    to
+        transform: scaleX(1 )
+
+@keyframes show-nav 
+    from
+        opacity: 0
+    
+    to
+        opacity: 1
+    
+
+.form
+    position: relative
+    top: 100%
+    left: 30%
+    margin: 2px
+    width: 40%
+    padding: 2em
+    text-align: center
+    height: auto
+
+    legend, span
+        font-weight: bold
+        font-size: 2em
+        color: white
+        
+    input[type = "text"], input[type = "password"], input[type = "email"],input[type = "number"], textarea
+        border: 0
+        margin: 20px auto
+        position: relative
+        text-align: center
+        color: white
+        border: 0px solid #000000
+        border-bottom-width: 0.5px
+        border-radius: 24px
+        padding: 14px 10px
+        background-color: transparent
+        width: 155px
+        transition: 0.25s
+        display: block
+
+        &:focus
+            width: 280px
+            border-bottom-width: 0.75px
+            border: 1px solid white
+            outline: 0
+
+    input[type='submit']
+        border:0
+        background: white
+        display: block
+        margin: 20px auto
+        text-align: center
+        padding: 14px 40px
+        outline: none
+        color: black
+        border-radius: 24px
+        transition: 0.25s
+        cursor: pointer
+
+        &:hover
+            background: #2ecc71   
+            color: white
+
+.collapsing 
+  transition: none !important
+
+.formx
+    position: relative
+    top: 100%
+    left: 30%
+    margin: 2px
+    width: 40%
+    padding: 2em
+    text-align: center
+    height: auto
+
+    legend, span
+        font-weight: bold
+        font-size: 2em
+        color: black
+        
+    input[type = "text"], input[type = "password"], input[type = "email"],input[type = "number"], textarea
+        border: 0
+        margin: 20px auto
+        position: relative
+        text-align: center
+        color: black
+        border: 0.5px solid black
+        border-bottom-width: 0.5px
+        border-radius: 24px
+        padding: 14px 10px
+        width: 155px
+        transition: 0.25s
+        display: block
+
+        &:focus
+            width: 280px
+            border-bottom-width: 0.75px
+            border: 2px solid black
+            outline: 0
+
+    input[type='submit']
+        border:0
+        background: black
+        display: white
+        margin: 20px auto
+        text-align: center
+        padding: 14px 40px
+        outline: none
+        color: white
+        border-radius: 24px
+        transition: 0.25s
+        cursor: pointer
+
+        &:hover
+            background: #2ecc71   
+            color: black
