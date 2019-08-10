@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,8 +26,8 @@ SECRET_KEY = 'q98s&d(p)y)5q&15awpl#(um-o!gm*6w6mk*!h@4&j$ra_%y7l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'ancient-falls-49201.herokuapp.com']
 
 # Application definition
 
@@ -143,3 +144,5 @@ AUTH_USER_MODEL = 'users.User'
 #GOOGLE_MAPS_API_KEY = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAgatq4KgsR2NHXXIG8YxiwncrsEz_xis8&v=3.exp"
 
 MAPS_API_KEY = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD1n0SFCc0AAH07xDdgCsS617nmmMZjMGo&callback=initMap'
+
+django_heroku.settings(locals())

@@ -1,2 +1,3 @@
-web: node dist/server.js
+web: gunicorn project.wsgi —-log-file -
+
 
