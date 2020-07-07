@@ -5,3 +5,7 @@ Volunteer-Match System
 
 UPDATE: 16th October 2019
 Some parts of the project has been removed for moderation, will be updated soon.
+
+UPDATE: 7th July 2020
+Shifted the project to Flutter.
+https://github.com/sehejjain/this-is-us-Flutter
