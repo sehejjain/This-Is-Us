@@ -5,5 +5,5 @@ Volunteer-Match System
 
 
 UPDATE: 7th July 2020
-Shifted the project to Flutter:\n
+Shifted the project to Flutter:
 https://github.com/sehejjain/this-is-us-Flutter
